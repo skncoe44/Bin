@@ -1,0 +1,96 @@
+package d;
+import java.util.Scanner;
+class Complex_op
+{
+float real, imag;
+Complex_op()
+{
+real = 0;
+imag = 0;
+}
+Complex_op(float r, float i)
+{
+real = r;
+imag = i;
+}
+void addnumbers(Complex_op c1, Complex_op c2)
+{
+float real, imag;
+real = (c1.real + c2.real);
+imag = (c1.imag + c2.imag);
+System.out.println("Addition is ("+real+")+("+imag+")i");
+}
+void subnumbers(Complex_op c1, Complex_op c2)
+{
+float real, imag;
+real = (c1.real - c2.real);
+imag = (c1.imag - c2.imag);
+System.out.println("substraction is ("+real+")+("+imag+")i");
+}
+void mulnumbers(Complex_op c1, Complex_op c2)
+{
+float real, imag;
+real = (c1.real * c2.real);
+imag = (c1.imag * c2.imag);
+System.out.println("Multiplication is ("+real+")+("+imag+")i");
+}
+void divnumbers(Complex_op c1, Complex_op c2)
+{
+float real, imag;
+real = (c1.real / c2.real);
+imag = (c1.imag / c2.imag);
+System.out.println("Division is ("+real+")+("+imag+")i");
+}
+}
+public class Complex {
+public static void main(String[] args)
+{
+float real, imag;
+Complex_op cal = new Complex_op();
+Scanner input = new Scanner(System.in);
+System.out.println("Enter the first number : ");
+real = input.nextInt();
+imag = input.nextInt();
+System.out.println("("+real+")+("+imag+")i");
+Complex_op n1 = new Complex_op(real, imag);
+System.out.println("Enter the second number : ");
+real = input.nextInt();
+imag = input.nextInt();
+System.out.println("("+real+")+("+imag+")i");
+Complex_op n2 = new Complex_op(real, imag);
+int c;
+String ans;
+do
+{
+System.out.println("Choices are : ");
+System.out.println("1.Addition");
+System.out.println("2.Substraction");
+System.out.println("3.Multiplication");
+System.out.println("4.Division");
+System.out.println("Enter your choice : ");
+c = input.nextInt();
+switch(c)
+{
+case 1:
+cal.addnumbers(n1, n2);
+break;
+case 2:
+cal.subnumbers(n1, n2);
+break;
+case 3:
+cal.mulnumbers(n1, n2);
+break;
+case 4:
+cal.divnumbers(n1, n2);
+break;
+default:
+System.out.println("You have Enter wrong
+choice!!");
+}
+System.out.println("\nDo you want to continue?? yes or
+no");
+ans = input.next();
+}
+while (ans.equals("yes"));
+}
+}

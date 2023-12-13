@@ -1,0 +1,114 @@
+package a;
+import java.util.Scanner;
+class Employee
+{
+ String name,add;
+String mail;
+ float id,mobile,basic,net;
+Scanner sc=new Scanner(System.in);
+ void salary()
+ {
+ float da,hra,pf,cf,gross;
+ System.out.println("Enter Basic salary: ");
+ basic=sc.nextFloat();
+ da = basic*97/100;
+ hra = basic * 10/100;
+ pf = basic *12/100;
+ cf = basic*0.1f/100;
+ gross = basic+da+hra+pf+cf;
+ net=basic+da+hra-pf-cf;
+ System.out.println("\nName:"+name);
+ System.out.println("Basic :"+basic);
+ System.out.println("Gross Salary:"+gross);
+ System.out.println("net Salary:"+net);
+ System.out.println("mailid :"+mail);
+ }
+}class Programmer extends Employee
+{
+ Programmer(String name,String mail)
+ {
+ System.out.println("\n-:Programmer Salary Details:-");
+ this.name = name;
+ this.mail = mail;
+ }
+}
+class TeamLead extends Employee
+{
+TeamLead(String name,String mail)
+{
+System.out.println("\n-:TeamLead Salary Details:-");
+ this.name = name;
+ this.mail = mail;
+ }
+}
+class APM extends Employee
+{
+APM(String name,String mail)
+{
+System.out.println("\n-:APM Salary Details:-");this.name = name;
+ this.mail = mail;
+ }
+}
+class PM extends Employee
+{
+PM(String name,String mail)
+{
+ System.out.println("\n-:PM Salary Details:-");
+ this.name = name;
+ this.mail = mail;
+ }
+}
+public class inheri
+{
+public static void main(String[] args)
+{
+int ch;
+ String ans;
+ do
+ {
+ Scanner sc=new Scanner(System.in);
+ System.out.println("\nCHOICES ARE :-");
+ System.out.println("1.Progrmmer");System.out.println("2.Teamleadn");
+ System.out.println("3.APM");
+ System.out.println("4.PM");
+ System.out.println("5.exit");
+ System.out.println("Enter your choice:");
+ ch=sc.nextInt();
+
+ switch(ch)
+ {
+ case 1:
+ Programmer P = new Programmer("Sadhna
+Joshi","sadhana23@gmail.com");
+ P.salary();
+ break;
+
+ case 2:
+ TeamLead t = new TeamLead("Aishwarya
+patil","aish42@gmail.com");
+ t.salary();
+ break;
+
+ case 3:
+ APM AP=new APM("Arvind
+Kumbhar","arvind54@gmail.com");
+ AP.salary();
+ break;case 4:
+ PM p1=new PM("Aditya
+Deshmukh","aditya30@gmail.com");
+ p1.salary();
+ break;
+
+ case 5:
+ System.out.println("Exit");
+ break;
+
+ default:
+ System.out.println("wrong choice");
+ }
+ System.out.println("\nDo you want to continue?? yes or no");
+ ans = sc.next();
+ }
+ while(ans.equals("yes"));
+}
+}

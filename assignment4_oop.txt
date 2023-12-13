@@ -1,0 +1,73 @@
+package assignment4;
+import java.util.*;
+abstract class shape
+{
+	
+int a,b;
+Scanner s=new Scanner(System.in);
+
+void input()
+{
+	System.out.println("Enter the value of a and b");
+	a=s.nextInt();
+	b=s.nextInt();
+
+	}
+abstract public void printarea();
+
+}
+class rectangle extends shape
+{
+public int area_rect;
+public void printarea()
+{
+area_rect=a*b;
+System.out.println("Length of rectangle: "+a +"breadth of rectangle: "+b);
+System.out.println("The area of rectangle is:"+area_rect);
+}
+}
+class triangle extends shape
+{
+double area_tri;
+public void printarea()
+{
+System.out.println("Base of triangle: "+a +"height of triangle: "+b);
+area_tri=(0.5*a*b);
+System.out.println("The area of triangle is:"+area_tri);
+}
+}
+public class Dynamic
+{
+public static void main(String[] args)
+{
+shape s;   //reference variable of class shape
+Scanner sc=new Scanner(System.in);
+int choice;
+do
+{
+    System.out.println("Enter the choice :");
+    choice=sc.nextInt();
+
+switch(choice)
+{
+    case 1:
+
+s=new rectangle();   //object create rectangle
+s.input();
+s.printarea();           
+break;
+    case 2:
+    	
+s=new triangle();   //object create triangle
+s.input();
+s.printarea();
+break;
+    case 3: System.out.println("exit");
+    break;
+
+default:System.out.println("wrong choice");
+    return;
+}
+}while(choice!=4);
+}
+}
