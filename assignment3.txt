@@ -78,24 +78,20 @@ int ch;
  switch(ch)
  {
  case 1:
- Programmer P = new Programmer("Sadhna
-Joshi","sadhana23@gmail.com");
+ Programmer P = new Programmer("Sadhna Joshi","sadhana23@gmail.com");
  P.salary();
  break;
 
  case 2:
- TeamLead t = new TeamLead("Aishwarya
-patil","aish42@gmail.com");
+ TeamLead t = new TeamLead("Aishwarya patil","aish42@gmail.com");
  t.salary();
  break;
 
  case 3:
- APM AP=new APM("Arvind
-Kumbhar","arvind54@gmail.com");
+ APM AP=new APM("Arvind Kumbhar","arvind54@gmail.com");
  AP.salary();
  break;case 4:
- PM p1=new PM("Aditya
-Deshmukh","aditya30@gmail.com");
+ PM p1=new PM("Aditya Deshmukh","aditya30@gmail.com");
  p1.salary();
  break;
 
