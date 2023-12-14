@@ -1,5 +1,5 @@
-Package b;
-Import java.util.*;
+package b;
+import java.util.*;
 class publication
 {
  String Title;
@@ -93,7 +93,8 @@ public static void main(String[] args)
  b.getdata();
  b.ordercopies();
  b.salecopy();
- breakcase 2:
+ break;
+ case 2:
  Magzine m = new Magzine();
  m.getdata1();
  m.receiveissue();
